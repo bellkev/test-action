@@ -1,0 +1,12 @@
+name: "Test Action"
+description: "Do action things"
+inputs:
+  repo:
+    description: "Reposity to use"
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    TEST_REPO: ${{ inputs.repo }}
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
