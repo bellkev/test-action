@@ -1,6 +1,6 @@
 #! /bin/sh
 
-set -x
+set -ux
 
 curl --request POST \
   --url "https://api.github.com/repos/$TEST_REPO/issues" \
