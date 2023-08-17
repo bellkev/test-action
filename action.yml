@@ -9,4 +9,4 @@ runs:
   image: Dockerfile
   env:
     TEST_REPO: ${{ inputs.repo }}
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    GITHUB_TOKEN: ${{ github.token }}
