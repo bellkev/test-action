@@ -4,9 +4,13 @@ inputs:
   repo:
     description: "Reposity to use"
     required: true
+  token:
+    description: "GitHub token to use"
+    required: false
+    default: ${{ github.token }}
 runs:
   using: docker
   image: Dockerfile
   env:
     TEST_REPO: ${{ inputs.repo }}
-    GITHUB_TOKEN: ${{ github.token }}
+    GITHUB_TOKEN: ${{ inputs.token }}
